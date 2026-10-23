@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10120f" />
+    <meta
+      name="description"
+      content="Aster Studio is an independent creative studio building thoughtful digital worlds for a more curious future."
+    />
+    <title>Aster Studio — Digital worlds for curious people</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Aster Studio home">
+        <span class="wordmark-symbol" aria-hidden="true">✳</span>
+        aster<span class="wordmark-reg">®</span>
+      </a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="#studio">Studio</a>
+        <a href="#work">Selected work</a>
+        <a href="#approach">Approach</a>
+      </nav>
+      <a class="header-cta" href="#contact">
+        Have a project in mind?
+        <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-heading">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Independent creative studio · Somewhere</p>
+          <h1 id="hero-heading">A universe<br />made for the<br /><em>curious.</em></h1>
+          <p class="hero-description">
+            We make digital things feel a little more human, a little more magical, and a lot more
+            meaningful.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-lime" href="#work">Explore our work <span aria-hidden="true">↘</span></a>
+            <span class="hero-note">Good things take<br />a little wonder.</span>
+          </div>
+        </div>
+        <div class="planet-wrap" aria-label="A softly glowing sculptural bloom with drifting starlight">
+          <div class="bloom-art" aria-hidden="true">
+            <svg class="bloom-illustration" viewBox="0 0 400 400" role="presentation">
+              <defs>
+                <radialGradient id="bloom-glow">
+                  <stop offset="0%" stop-color="#d6fa70" stop-opacity=".19" />
+                  <stop offset="100%" stop-color="#d6fa70" stop-opacity="0" />
+                </radialGradient>
+                <linearGradient id="petal-light" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#f5f4e9" />
+                  <stop offset="100%" stop-color="#c9e8ae" />
+                </linearGradient>
+                <linearGradient id="petal-green" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#d6fa70" />
+                  <stop offset="100%" stop-color="#7dbb89" />
+                </linearGradient>
+              </defs>
+              <circle cx="200" cy="200" r="180" fill="url(#bloom-glow)" />
+              <circle cx="200" cy="200" r="145" fill="none" stroke="#c8d5b5" stroke-opacity=".23" />
+              <circle cx="200" cy="200" r="170" fill="none" stroke="#c8d5b5" stroke-opacity=".12" stroke-dasharray="2 9" />
+              <g class="petal-outer" fill="url(#petal-light)">
+                <path d="M200 203C164 181 154 139 169 97c8-23 22-42 31-54 9 12 24 31 31 54 15 42 5 84-31 106Z" />
+                <path d="M200 203C164 181 154 139 169 97c8-23 22-42 31-54 9 12 24 31 31 54 15 42 5 84-31 106Z" transform="rotate(90 200 200)" />
+                <path d="M200 203C164 181 154 139 169 97c8-23 22-42 31-54 9 12 24 31 31 54 15 42 5 84-31 106Z" transform="rotate(180 200 200)" />
+                <path d="M200 203C164 181 154 139 169 97c8-23 22-42 31-54 9 12 24 31 31 54 15 42 5 84-31 106Z" transform="rotate(270 200 200)" />
+              </g>
+              <g class="petal-inner" fill="url(#petal-green)" opacity=".92">
+                <path d="M200 205c-29-18-36-48-24-77 6-16 17-29 24-37 7 8 18 21 24 37 12 29 5 59-24 77Z" transform="rotate(45 200 200)" />
+                <path d="M200 205c-29-18-36-48-24-77 6-16 17-29 24-37 7 8 18 21 24 37 12 29 5 59-24 77Z" transform="rotate(135 200 200)" />
+                <path d="M200 205c-29-18-36-48-24-77 6-16 17-29 24-37 7 8 18 21 24 37 12 29 5 59-24 77Z" transform="rotate(225 200 200)" />
+                <path d="M200 205c-29-18-36-48-24-77 6-16 17-29 24-37 7 8 18 21 24 37 12 29 5 59-24 77Z" transform="rotate(315 200 200)" />
+              </g>
+              <g class="bloom-core">
+                <circle cx="200" cy="200" r="26" fill="#f5f0d0" />
+                <circle cx="200" cy="200" r="11" fill="#d6fa70" />
+              </g>
+              <circle cx="83" cy="147" r="3" fill="#d6fa70" />
+              <circle cx="314" cy="267" r="2" fill="#f5f4e9" />
+              <path d="M308 111v12m-6-6h12" stroke="#d6fa70" stroke-width="1.5" />
+            </svg>
+          </div>
+          <canvas id="planet-canvas"></canvas>
+          <div class="planet-label label-top"><span>FIG. 001</span><span>A SMALLER KIND OF MAGIC</span></div>
+          <div class="planet-label label-bottom"><span>GROW TOWARD THE LIGHT</span><span>FLOAT A LITTLE</span></div>
+          <div class="orbit-caption"><span class="caption-star">✳</span> A different point of view</div>
+        </div>
+        <div class="hero-index"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>01 / 04</span></div>
+      </section>
+
+      <section class="intro-strip" aria-label="Studio introduction">
+        <p>Small studio.<br /><span>Big little ideas.</span></p>
+        <p class="intro-copy">Independent by nature, collaborative by design.<br />A creative practice for a changing world.</p>
+        <span class="strip-spark" aria-hidden="true">✳</span>
+      </section>
+
+      <section class="studio-section section-pad" id="studio">
+        <div class="section-kicker"><span>01 — A little about us</span><span>EST. 2018 · EVERYWHERE</span></div>
+        <div class="studio-grid">
+          <h2>Good design<br />should make you <em>feel</em><br />something.</h2>
+          <div class="studio-text">
+            <p class="studio-lede">Not just look at something. Not just click on something. Feel something.</p>
+            <p>We’re a small, deliberately independent studio partnering with thoughtful people to turn ambitious ideas into remarkable digital experiences. The kind you remember after you close the tab.</p>
+            <a class="text-link" href="#approach">Get to know our approach <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="studio-facts">
+          <div><span class="fact-number">08</span><span class="fact-label">years making<br />the internet nicer</span></div>
+          <div><span class="fact-number">24</span><span class="fact-label">good humans<br />we call collaborators</span></div>
+          <div><span class="fact-number">12</span><span class="fact-label">places we’ve<br />called our office</span></div>
+          <div class="fact-aside">Curiosity is<br />our compass <span>↗</span></div>
+        </div>
+      </section>
+
+      <section class="work-section section-pad" id="work">
+        <div class="section-kicker"><span>02 — A few things we’ve made</span><span>SELECTED WORLDS · 2023—25</span></div>
+        <div class="work-heading">
+          <h2>Little windows<br />into <em>other worlds.</em></h2>
+          <p>A collection of ideas made real, alongside people who care about what they put into the world.</p>
+        </div>
+        <div class="project-grid">
+          <a class="project-card project-orbit" href="#contact" aria-label="Orbit House project, digital home for slow travel">
+            <div class="project-art orbit-art">
+              <div class="art-sun"></div><div class="art-orbit art-orbit-one"></div><div class="art-orbit art-orbit-two"></div>
+              <div class="art-planet"></div><span class="art-word">O<span>·</span>H</span>
+              <span class="art-stamp">TAKE<br />THE<br />LONG WAY</span>
+              <span class="project-open">↗</span>
+            </div>
+            <div class="project-meta"><div><span class="project-number">01 / 03</span><h3>Orbit House</h3></div><p>Digital home for slow travel</p></div>
+          </a>
+          <a class="project-card project-morrow" href="#contact" aria-label="Morrow project, a more thoughtful daily ritual">
+            <div class="project-art morrow-art">
+              <div class="morrow-halo"></div><span class="morrow-type">morrow<span>®</span></span>
+              <span class="morrow-caption">A MORE THOUGHTFUL<br />DAILY RITUAL.</span><div class="morrow-moon"></div>
+              <span class="project-open">↗</span>
+            </div>
+            <div class="project-meta"><div><span class="project-number">02 / 03</span><h3>Morrow</h3></div><p>Making room for a slower start</p></div>
+          </a>
+          <a class="project-card project-field" href="#contact" aria-label="Field Notes project, stories from the edges">
+            <div class="project-art field-art">
+              <div class="field-frame"><span>FIELD<br />NOTES</span><span class="field-sub">STORIES FROM<br />THE EDGES.</span><span class="field-issue">VOL. 06 — 2025</span></div>
+              <span class="project-open">↗</span>
+            </div>
+            <div class="project-meta"><div><span class="project-number">03 / 03</span><h3>Field Notes</h3></div><p>An independent journal for elsewhere</p></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="approach-section section-pad" id="approach">
+        <div class="section-kicker"><span>03 — How we see it</span><span>A GOOD WAY TO BEGIN</span></div>
+        <div class="approach-layout">
+          <h2>More wonder.<br /><em>Less noise.</em></h2>
+          <div class="approach-content">
+            <p class="approach-intro">The internet doesn’t need more stuff. It needs more things worth caring about.</p>
+            <div class="principle-list">
+              <div><span>01</span><h3>Start with a good question.</h3><p>Curiosity opens doors that a brief can’t.</p><span class="principle-mark">✳</span></div>
+              <div><span>02</span><h3>Make room for the unexpected.</h3><p>The best answers rarely look like answers.</p><span class="principle-mark">✳</span></div>
+              <div><span>03</span><h3>Leave the world a little better.</h3><p>Thoughtful work has a longer orbit.</p><span class="principle-mark">✳</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section-pad" id="contact">
+        <div class="contact-grain" aria-hidden="true"></div>
+        <div class="section-kicker"><span>04 — Your turn, maybe?</span><span>OUR INBOX IS A FRIENDLY PLACE</span></div>
+        <div class="contact-content">
+          <span class="contact-spark" aria-hidden="true">✳</span>
+          <h2>Got a little<br />wonder <em>to share?</em></h2>
+          <a class="button button-dark" href="mailto:hello@aster.studio">Tell us about it <span aria-hidden="true">↗</span></a>
+          <p>No pitch decks needed. Just a hello.</p>
+        </div>
+        <footer class="site-footer">
+          <a class="wordmark footer-wordmark" href="#home"><span class="wordmark-symbol" aria-hidden="true">✳</span>aster<span class="wordmark-reg">®</span></a>
+          <span>Independent by nature. Curious by design.</span>
+          <span>© ASTER STUDIO 2025</span>
+          <a href="#home">BACK TO THE TOP ↑</a>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
